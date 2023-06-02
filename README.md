@@ -1,2 +1,3 @@
-# trivial_django_app
-trivial django app for jesse
+# Trivial Django App
+
+Following [tutorial](https://docs.djangoproject.com/en/4.2/intro/tutorial02/) on the Django Project website.
