@@ -1,5 +1,5 @@
 name: Pull Request Validation
-run-name: Validation commit for pull-request for {{github.actor}}
+run-name: Validation commit for pull-request for ${{github.actor}}
 on: [pull_request]
 
 jobs:
