@@ -37,4 +37,5 @@ jobs:
       - name: Run tests
         run: |
             poetry run python manage.py test -v 2
+        working-directory: ${{ env.working-directory }}
 
