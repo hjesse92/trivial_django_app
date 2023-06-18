@@ -9,10 +9,6 @@ from .serializers import QuestionCreateSerializer, QuestionSerializer
 
 
 # Create your views here.
-def hello(request):
-    return HttpResponse("Hello world, Jesse here")
-
-
 class QuestionAPIView(APIView):
     def get(self, request):
         question = Question.objects.all()

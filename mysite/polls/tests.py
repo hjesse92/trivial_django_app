@@ -6,15 +6,12 @@ from .models import Question
 class Tests(TestCase):
     def setUp(self):
         self.client = Client()
-
-    def test_hello_world(self):
-        response = self.client.get('/hello/')
-        self.assertEqual(response.status_code, 200)
+        q1 = Question.objects.create(question_text="test question")
 
     def test_create_question(self):
-        self.assertEqual(Question.objects.count(), 0)
+        self.assertEqual(Question.objects.count(), 1)
         response = self.client.post('/api/questions/create/', {'question_text': "What is Saad's favorite ramen?"})
-
+        self.assertEqual(Question.objects.count(), 2)
         self.assertEqual(response.status_code, 201)
         self.assertEqual(response.json()['message'], 'Question created successfully!')
 
