@@ -15,7 +15,7 @@ class Tests(TestCase):
         self.assertEqual(response.status_code, 201)
         self.assertEqual(response.json()['message'], 'Question created successfully!')
 
-        testquestion = Question.objects.get(pk=1)
+        testquestion = Question.objects.get(pk=2)
         self.assertEqual(testquestion.question_text, "What is Saad's favorite ramen?")
 
     def test_get_question(self):
